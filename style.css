@@ -1,0 +1,65 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+ * {
+    padding: 0;
+    margin: 0;
+ }
+
+ html, body {
+    overflow: hidden;
+    user-select: none;
+   }
+
+   #dark {
+    background-color: var(--light);
+    height: 100vh;
+    transition: .5s;
+   }
+
+   #dark.dark-theme {
+    background-color: var(--dark);
+   }
+
+   .main{
+    width: 24rem;
+    height: 10rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--label);
+    border-radius: 5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+   }
+
+   #switch {
+    width: 9.5rem;
+    height: 9.5rem;
+    border-radius: 50%;
+    background-color: var(--light);
+    position: fixed;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+   }
+
+   .label {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   img {
+    height: 100%;
+   }
+
+   #switch.dark-switch {
+    left: 23%;
+   }
+
