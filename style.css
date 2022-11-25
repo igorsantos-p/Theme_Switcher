@@ -1,65 +1,68 @@
 :root {
-	--dark: #292C35;
-	--light: #F1F1F1;
-	--label: #111;
+  --bg-color: #f1f1f1;
+  --dark: #292c35;
 }
- * {
-    padding: 0;
-    margin: 0;
- }
 
- html, body {
-    overflow: hidden;
-    user-select: none;
-   }
+* {
+  padding: 0;
+  margin: 0;
+}
 
-   #dark {
-    background-color: var(--light);
-    height: 100vh;
-    transition: .5s;
-   }
+body {
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  background: var(--bg-color);
+  transition: background 0.3s;
+}
 
-   #dark.dark-theme {
-    background-color: var(--dark);
-   }
+:root:has(.switch:checked) {
+  --bg-color: #292c35;
+}
 
-   .main{
-    width: 24rem;
-    height: 10rem;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--label);
-    border-radius: 5rem;
-    box-sizing: border-box;
-    cursor: pointer;
-   }
+.container {
+  width: 24rem;
+  height: 10rem;
+  border-radius: 5rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+}
 
-   #switch {
-    width: 9.5rem;
-    height: 9.5rem;
-    border-radius: 50%;
-    background-color: var(--light);
-    position: fixed;
-    top: 50%;
-    left: 77%;
-    transform: translate(-50%, -50%);
-    transition: .5s;
-   }
+.images {
+  width: 24rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
 
-   .label {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   }
+}
 
-   img {
-    height: 100%;
-   }
+.switch {
+  appearance: none;
+  width: 24rem;
+  height: 10rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
 
-   #switch.dark-switch {
-    left: 23%;
-   }
+.switch::before {
+  content: "";
+  width: 9.5rem;
+  height: 9.5rem;
+  background: #ddd;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.25rem;
+  transform: translate(0.5rem);
+  transition: 0.3s;
+}
+
+.switch:checked::before {
+  transform: translate(14rem);
+  transition: 0.3s;
+}
 
