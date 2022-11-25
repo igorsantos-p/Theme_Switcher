@@ -42,7 +42,7 @@ body {
   appearance: none;
   width: 24rem;
   height: 10rem;
-  border-radius: 50%;
+  border-radius: 5rem;
   cursor: pointer;
   position: absolute;
   top: 0;
